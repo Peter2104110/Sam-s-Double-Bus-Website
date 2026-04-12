@@ -97,7 +97,7 @@ export default function Home() {
         <header className="sticky top-0 z-50 bg-white/60 backdrop-blur-sm border-b-4 border-primary shadow-lg">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-3 w-96 h-auto">
-              <img src="./src/assets/SamsDoubleBus.png"/>
+              <img src="/SamsDoubleBus.png"/>
             </div>
             <nav className="hidden md:flex gap-8">
               <a href="#menu" className="text-xl text-foreground hover:text-primary transition-all duration-200 font-semibold hover:scale-110 hover:underline underline-offset-4">
