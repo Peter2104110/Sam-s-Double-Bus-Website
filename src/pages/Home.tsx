@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Phone, MapPin, Clock, ChefHat } from "lucide-react";
+//import { useTheme } from "../contexts/ThemeContext";
 
 /**
  * DESIGN PHILOSOPHY: Retro American Diner with Modern Polish
@@ -87,6 +88,7 @@ const menuData = {
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Chicken Sandwiches");
   const categories = Object.keys(menuData);
+  //const { theme, toggleTheme } = useTheme();
 
   return (
     <>
@@ -110,6 +112,10 @@ export default function Home() {
                 Contact
               </a>
             </nav>
+            {/* Theme Toggle Button
+            <button onClick={toggleTheme} className="w-fit border-foreground border-2 rounded-full p-2">
+              {theme === "dark" ? "Light" : "Dark"} mode
+            </button> */}
           </div>
         </header>
 
@@ -128,14 +134,14 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/10"></div>
 
             <div className="relative z-10 text-center text-white max-w-2xl px-4" style={{}}>
-              <h2 className="text-5xl md:text-7xl font-thin max-sm:text-4xl mb-4" style={{textShadow: '0 5px 10px rgba(0, 0, 0, 0.226)'}}>
+              <h2 className="text-background text-5xl md:text-7xl font-thin max-sm:text-4xl mb-4" style={{textShadow: '0 5px 10px rgba(0, 0, 0, 0.226)'}}>
                 Welcome to <span className="text-primary">Sam's</span>
               </h2>
-              <p className="text-xl md:text-2xl mb-8" style={{textShadow: '0 5px 10px rgba(0, 0, 0, 0.35)'}}>
+              <p className="text-background text-xl md:text-2xl mb-8" style={{textShadow: '0 5px 10px rgba(0, 0, 0, 0.35)'}}>
                 Serving Authentic Subs, Broasted Chicken & Burgers Since 2010
               </p>
               <a href="#contact">
-                <Button size="lg" className="bg-primary hover:bg-red-700 text-white text-lg px-8 py-6 rounded-lg font-bold">
+                <Button size="lg" className="bg-primary hover:bg-red-700 text-background text-lg px-8 py-6 rounded-lg font-bold">
                   Order Now
                 </Button>
               </a>
@@ -145,15 +151,15 @@ export default function Home() {
 
           {/* Diagonal Cut Divider */}
           <div
-            className="md:h-20 bg-white"
+            className="md:h-20 bg-background"
             style={{
-              clipPath: "polygon(0 0, 100% 20%, 100% 100%, 0 100%)",
+              /*clipPath: "polygon(0 0, 100% 20%, 100% 100%, 0 100%)",*/
             }}
           ></div>
         </section>
 
         {/* Tabbed Menu Section */}
-        <section id="menu" className="md:py-16 py-10 bg-white">
+        <section id="menu" className="md:py-16 py-10 bg-background">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl max-sm:text-3xl font-bold text-center mb-4 text-primary">Our Menu</h2>
 
@@ -167,8 +173,8 @@ export default function Home() {
                   onClick={() => setActiveTab(category)}
                   className={`px-4 py-2 rounded-lg font-bold transition-all min-w-max ${
                     activeTab === category
-                      ? "bg-primary text-white shadow-lg max-sm:text-sm"
-                      : "bg-gray-200 text-foreground hover:bg-gray-300 max-sm:text-sm"
+                      ? "bg-custom-bg-active text-custom-bg-active-text shadow-lg max-sm:text-sm"
+                      : "bg-custom-bg text-custom-bg-text hover:bg-custom-bg-hover max-sm:text-sm" /*gray-200*/
                   }`}
                 >
                   {category}
@@ -198,7 +204,7 @@ export default function Home() {
         </section>
 
         {/* Featured Items Section */}
-        <section className="md:py-16 py-10 bg-white">
+        <section className="md:py-16 py-10 bg-background">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl max-sm:text-3xl font-bold text-center mb-4 text-primary">Signature Dishes</h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
@@ -263,7 +269,7 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 bg-gray-50">
+        <section id="about" className="py-16 bg-sidebar"> {/*gray-50 */}
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl max-sm:text-3xl font-bold text-center mb-4 text-primary">About Sam's Double Bus</h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>

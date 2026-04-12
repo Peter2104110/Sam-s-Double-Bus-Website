@@ -39,6 +39,11 @@ module.exports = {
         chart3: 'var(--chart-3)',
         chart4: 'var(--chart-4)',
         chart5: 'var(--chart-5)',
+        'custom-bg': 'var(--custom-bg)',
+        'custom-bg-text': 'var(--custom-bg-text)',
+        'custom-bg-hover': 'var(--custom-bg-hover)',
+        'custom-bg-active': 'var(--primary)',
+        'custom-bg-active-text': 'var(--custom-bg-active-text)',
       },
       borderRadius: {
         sm: 'calc(var(--radius) - 4px)',

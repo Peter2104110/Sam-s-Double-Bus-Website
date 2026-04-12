@@ -69,7 +69,7 @@ html{
 }
 
 :root {
-  --primary: #DC143C;
+  --primary: rgb(220, 20, 60);
   --primary-foreground: #FFFFFF;
   --sidebar-primary: #DC143C;
   --sidebar-primary-foreground: #FFFFFF;
@@ -79,9 +79,9 @@ html{
   --chart-4: #8B0000;
   --chart-5: #660000;
   --radius: 0.65rem;
-  --background: #FFFFFF;
-  --foreground: #1A1A1A;
-  --card: #F8F8F8;
+  --background: white;
+  --foreground: rgb(26, 26, 26);
+  --card: rgb(248, 248, 248);
   --card-foreground: #1A1A1A;
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.235 0.015 65);
@@ -93,25 +93,31 @@ html{
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: #E0E0E0;
-  --input: #F5F5F5;
-  --ring: #DC143C;
+  --border: rgb(224, 224, 224);
+  --input: rgb(245, 245, 245);
+  --ring: rgb(220, 20, 60);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.235 0.015 65);
   --sidebar-accent: oklch(0.967 0.001 286.375);
   --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.623 0.214 259.815);
+
+  --custom-bg: rgb(232, 232, 232);
+  --custom-bg-text: black;
+  --custom-bg-hover: rgb(215, 215, 215);
+  --custom-bg-active: var(--primary);
+  --custom-bg-active-text: white;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
+  --primary: rgb(220, 20, 60);
   --primary-foreground: var(--color-blue-50);
   --sidebar-primary: var(--color-blue-500);
   --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
+  --background: rgb(9, 9, 11);
+  --foreground: rgb(208, 205, 202);
+  --card: rgb(15, 15, 16); /*oklch(0.21 0.006 285.885)*/
   --card-foreground: oklch(0.85 0.005 65);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.85 0.005 65);
@@ -123,8 +129,8 @@ html{
   --accent-foreground:  oklch(0.92 0.005 65);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
+  --border: rgb(255, 255, 255, 0.1);
+  --input: rgb(255, 255, 255, 0.15);
   --ring: oklch(0.488 0.243 264.376);
   --chart-1: var(--color-blue-300);
   --chart-2: var(--color-blue-500);
@@ -137,6 +143,13 @@ html{
   --sidebar-accent-foreground:  oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.488 0.243 264.376);
+
+
+  --custom-bg: gray;
+  --custom-bg-text: white;
+  --custom-bg-hover: rgb(97, 95, 95);
+  --custombgactive: var(--primary);
+  --custom-bg-active-text: black;
 }
 
 @layer base {
