@@ -1,27 +1,14 @@
-/*src="%VITE_ANALYTICS_ENDPOINT%/umami"
-
-
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "tailwindcss/preflight";
-@tailwind utilities;
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*
-@layer utilities {
-  .outline-ring\/50 {
-    outline: 2px solid rgba(0, 255, 94, 0); /* example *
-  }
-}
-*/
 
 html{
   scroll-behavior: smooth;
@@ -30,6 +17,7 @@ html{
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-bebas: "Bebas Neue", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -69,17 +57,19 @@ html{
 }
 
 :root {
-  --primary: rgb(220, 20, 60);
+  --primary: #dc143c;
   --primary-foreground: #FFFFFF;
+
   --sidebar-primary: #DC143C;
   --sidebar-primary-foreground: #FFFFFF;
+  
   --chart-1: #FF6B6B;
   --chart-2: #DC143C;
   --chart-3: #B22222;
   --chart-4: #8B0000;
   --chart-5: #660000;
   --radius: 0.65rem;
-  --background: white;
+  --background: rgb(255, 255, 255);
   --foreground: rgb(26, 26, 26);
   --card: rgb(248, 248, 248);
   --card-foreground: #1A1A1A;
@@ -96,9 +86,12 @@ html{
   --border: rgb(224, 224, 224);
   --input: rgb(245, 245, 245);
   --ring: rgb(220, 20, 60);
+  
   --sidebar: oklch(0.985 0 0);
+
   --sidebar-foreground: oklch(0.235 0.015 65);
   --sidebar-accent: oklch(0.967 0.001 286.375);
+  
   --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.623 0.214 259.815);
@@ -153,18 +146,14 @@ html{
 }
 
 @layer base {
-  /*
-  * {
-    /*@apply border-border outline-ring/50;*
-  }*/
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.01rem;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Archivo Black', sans-serif; /*'Fredoka One'*/
+    font-family: 'Bebas Neue', sans-serif; /*'Fredoka One'*/
     font-weight: 400;
-    letter-spacing: 0.02em;
   }
   h1 {
     @apply text-5xl font-bold;
@@ -185,6 +174,10 @@ html{
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

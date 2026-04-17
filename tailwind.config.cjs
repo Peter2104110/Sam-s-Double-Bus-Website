@@ -52,6 +52,7 @@ module.exports = {
         xl: 'calc(var(--radius) + 4px)',
       },
       fontFamily: {
+        bebas: ['"Bebas Neue"', 'sans-serif'],
         fredoka: ['"Fredoka One"', 'cursive'],
         poppins: ['Poppins', 'sans-serif'],
       },
