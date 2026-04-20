@@ -92,7 +92,7 @@ export default function CustomSidebar({ children }: { children: React.ReactNode 
             {/* FOOTER */}
             <SidebarFooter>
                 <div className="text-xs text-muted-foreground px-2">
-                © 2026 Sam’s Double Bus
+                © {new Date().getFullYear()} Sam’s Double Bus
                 </div>
             </SidebarFooter>
             </Sidebar>

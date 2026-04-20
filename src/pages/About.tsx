@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { Phone, MapPin, Clock, ChefHat } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import Footer from "../components/ui/Footer";
 import { useEffect } from "react";
 
@@ -44,7 +44,7 @@ export default function About() {
               Welcome to <span className="text-primary">Sam's</span>
             </h2>
             <p className="text-background text-lg md:text-2xl mb-8" style={{textShadow: '0 5px 10px rgba(0, 0, 0, 0.35)'}}>
-              Serving Authentic Subs, Broasted Chicken & Burgers Since 2010
+              A family-owned restaurant serving you since 2010.
             </p>
             <a href="#contact">
               <Button size="lg" className="bg-primary hover:bg-red-700 text-background text-lg px-8 py-6 rounded-lg font-bold">
@@ -86,7 +86,6 @@ export default function About() {
               <Card className="border-2 border-primary hover:shadow-xl transition-shadow">
                 <CardHeader className="bg-primary text-white flex items-center py-1">
                   <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
-                    <ChefHat className="w-5 h-5"/>
                       Double Cheese Burger
                   </CardTitle>
                 </CardHeader>
@@ -99,7 +98,6 @@ export default function About() {
               <Card className="border-2 border-primary hover:shadow-xl transition-shadow">
                 <CardHeader className="bg-primary text-white flex items-center py-1">
                   <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
-                    <ChefHat className="w-5 h-5" />
                     Loaded Curly Fries
                   </CardTitle>
                 </CardHeader>
@@ -112,7 +110,6 @@ export default function About() {
               <Card className="border-2 border-primary hover:shadow-xl transition-shadow">
                 <CardHeader className="bg-primary text-white flex items-center py-1">
                   <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
-                    <ChefHat className="w-5 h-5" />
                     Broasted Chicken
                   </CardTitle>
                 </CardHeader>
@@ -173,7 +170,7 @@ export default function About() {
               <div className="flex flex-col justify-center text-center md:w-fit">
                 <Clock className="max-sm:w-10 max-sm:h-10 md:w-12 md:h-12 mx-auto mb-4" />
                 <h3 className="max-sm:text-lg md:text-xl font-bold mb-2">Hours</h3>
-                <p className="md:text-lg max-sm:text-sm font-[Bebas Neue]">Open Friday to Wednesday: 12-10pm</p>
+                <p className="md:text-lg max-sm:text-sm font-[Bebas Neue]">Open Friday to Wednesday: 12-10:30pm</p>
               </div>
             </a>
 
