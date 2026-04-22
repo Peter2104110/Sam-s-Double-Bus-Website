@@ -29,7 +29,7 @@ export default function Navbar() {
                 </nav>
 
                 <div className="absolute left-1/2 -translate-x-1/2 flex items-center md:w-72 w-52">
-                    <img src="/SamsDoubleBus.png"/>
+                    <img src="/SamsDoubleBus.webp"/>
                 </div>
                 
 

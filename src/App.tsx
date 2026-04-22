@@ -25,20 +25,20 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <SidebarProvider>
         <ThemeProvider
           defaultTheme="light"
           // switchable
         >
           <TooltipProvider>
-            <CustomSidebar>
-              <Toaster />
-              <Navbar />
-              <Router />
-            </CustomSidebar>
+            <Toaster />
+            <SidebarProvider>
+              <CustomSidebar>
+                <Navbar />
+                <Router />
+              </CustomSidebar>
+            </SidebarProvider>
           </TooltipProvider>
         </ThemeProvider>
-      </SidebarProvider>
     </ErrorBoundary>
   );
 }

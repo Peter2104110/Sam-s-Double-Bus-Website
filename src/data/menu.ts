@@ -21,10 +21,10 @@ export const menuData: Record<string, MenuItem[]> = {
     { name: "STEAK & CHEESE", price: "$8", desc: "Our premium steak, caramelized onions, fresh mushrooms, home-style sauce, double cheese, lettuce and mayo" },
   ],
   "Burgers": [
-    { name: "Mozzarella Chicken Burger ★", price: "$8", desc: "Chicken breast, BBQ sauce, mozzarella patty, mayo-garlic sauce, lettuce and pickles", image: "/menu-burger.jpg" },
+    { name: "Mozzarella Chicken Burger ★", price: "$8", desc: "Chicken breast, BBQ sauce, mozzarella patty, mayo-garlic sauce, lettuce and pickles", image: "/menu-burger.webp" },
     { name: "CHEESE BURGER", price: "$8", desc: "Our prime Angus beef, caramelized onions, cheddar cheese, lettuce, pickles, cocktail sauce" },
     { name: "CHICKEN BURGER", price: "$7", desc: "Crispy chicken, coleslaw, cocktail sauce and fries" },
-    { name: "DOUBLE CHEESE BURGER", price: "$10", desc: "Our Double prime Angus beef patties, caramelized onions, cheddar cheese, lettuce, pickles, cocktail sauce", image: "/sams-burger.png" },
+    { name: "DOUBLE CHEESE BURGER", price: "$10", desc: "Our Double prime Angus beef patties, caramelized onions, cheddar cheese, lettuce, pickles, cocktail sauce", image: "/sams-burger.webp" },
     { name: "K BOMB", price: "$8", desc: "Our prime angus beef, double cheese, lettuce, potato chips, BBQ and cocktail sauce" },
     { name: "LEBANESE BURGER", price: "$7", desc: "Prime Angus beef, coleslaw, cocktail sauce and fries" },
     { name: "MUSHROOM SWISS", price: "$8", desc: "Our prime Angus beef, caramelized onions, fresh mushrooms, House made mushroom sauce, and our delicious cheese" },
@@ -45,7 +45,7 @@ export const menuData: Record<string, MenuItem[]> = {
     { name: "ZINGER", price: "$7", desc: "Deep fried Zinger chicken, BBQ, cheddar cheese, lettuce and mayo" },
   ],
   "Plates": [
-    { name: "Crispy Plate", price: "$16", desc: "8 Chicken tenders, fries, coleslaw, house made cocktail sauce (Half portion $9)", image: "/menu-crispy-plate.jpg" },
+    { name: "Crispy Plate", price: "$16", desc: "8 Chicken tenders, fries, coleslaw, house made cocktail sauce (Half portion $9)", image: "/menu-crispy-plate.webp" },
     { name: "Escalope Plate", price: "$16", desc: "8 Escalope tenders, fries, coleslaw, house made cocktail sauce (Half portion $9)" },
     { name: "Flavored Crispy Plate", price: "$16", desc: "8 Chicken tenders and fries (Half portion $9). Flavor options: BBQ sauce, Buffalo hot. Dips: Cocktail sauce and coleslaw" },
   ],

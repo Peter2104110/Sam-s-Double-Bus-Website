@@ -31,7 +31,7 @@ export default function About() {
           <div
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: "url('/menu-background.png')",
+              backgroundImage: "url('/menu-background.webp')",
               backgroundSize: "cover",
               backgroundPosition: "right bottom",
               backgroundRepeat: "no-repeat"
@@ -71,7 +71,7 @@ export default function About() {
             {/* Featured Image */}
             <div className="relative overflow-hidden rounded-lg shadow-xl flex items-center justify-center bg-gray-100 flex-1">
               <img
-                src="/sams-burger.png"
+                src="/sams-burger.webp"
                 alt="Featured menu items - burgers and fries"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />

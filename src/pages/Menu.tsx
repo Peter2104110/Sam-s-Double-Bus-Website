@@ -15,7 +15,7 @@ export default function Menu() {
 
             {/* Background Image */}
             <div 
-                className="fixed inset-0 z-0 bg-[url('/menu-background.png')] bg-cover bg-center md:bg-bottom"
+                className="fixed inset-0 z-0 bg-[url('/menu-background.webp')] bg-cover bg-center md:bg-bottom"
                 aria-hidden="true"
             />
             
