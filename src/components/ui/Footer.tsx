@@ -1,7 +1,7 @@
 
 export default function Footer(){
     return(
-        <footer className="bg-gray-900 text-white py-8 bottom-0">
+        <footer id="footer" className="bg-gray-900 text-white py-8 bottom-0">
             <div className="container mx-auto px-4 text-center">
                 <p className="text-xl font-bold mb-2">Sam's Double Bus</p>
                 <p className="text-gray-400 text-sm max-lg:text-xs">Serving food made with care, tradition, and love since 2010. ❤️</p>

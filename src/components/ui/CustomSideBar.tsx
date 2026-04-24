@@ -23,7 +23,7 @@ export default function CustomSidebar({ children }: { children: React.ReactNode 
     const [, setLocation] = useLocation();
 
     function goToContact() {
-    setLocation("/about#contact");
+    setLocation("/about#footer");
     }
 
   return (
