@@ -2,13 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 import { useState } from "react";
 import Footer from "../components/ui/Footer";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "../components/ui/dialog";
-import { menuData } from "../data/menu";
+//import { menuData } from "../data/menu";
+
+import menuData from "../data/menu.json"
+
 
 export default function Menu() {
 
-    const [activeTab, setActiveTab] = useState("Chicken Sandwiches");
-    const categories = Object.keys(menuData);
-    
+    const [activeTab, setActiveTab] = useState(0);
+    const categories = Object.entries(menuData)
   
     return (
         <div className="min-h-screen flex flex-col relative bg-transparent">
@@ -31,47 +33,48 @@ export default function Menu() {
                         <div className="flex gap-2 mb-8 justify-start overflow-auto md:flex-wrap md:overflow-visible md:justify-center">
                         {categories.map((category) => (
                             <button
-                            key={category}
-                            onClick={() => setActiveTab(category)}
+                            key={category[0]}
+                            onClick={() => setActiveTab(categories.indexOf(category))}
                             className={`px-4 py-2 rounded-lg text-xl transition-all min-w-max ${
-                                activeTab === category
+                                activeTab === categories.indexOf(category)
                                 ? "bg-custom-bg-active text-custom-bg-active-text shadow-lg max-sm:text-sm"
                                 : "border-[2px] border-custom-bg-active text-primary md:hover:bg-custom-bg-active md:hover:text-white max-sm:text-sm" /*gray-200*/
                             }`}
                             >
-                            {category}
+                            {category[0]}
                             </button>
                         ))}
                         </div>
 
                         {/* Menu Items */}
                         <div className="grid md:grid-cols-2 gap-2">
-                        {menuData[activeTab].map((item, idx) => (
-                            <Card key={idx} className="border-l-4 border-primary hover:shadow-lg transition-shadow bg-white/30 backdrop-blur-xs gap-2">
+                        {categories[activeTab][1].map((category) => (
+                            <Card key={category.name} className="border-l-4 border-primary hover:shadow-lg transition-shadow bg-white/30 backdrop-blur-xs gap-2">
                             <CardHeader className="">
                                 <div className="flex justify-between items-start">
-                                <CardTitle className="text-lg md:text-xl text-primary">{item.name}</CardTitle>
-                                <span className="font-bold text-primary text-lg md:text-xl">{item.price}</span>
+                                <CardTitle className="text-lg md:text-xl text-primary">{category.name}</CardTitle>
+                                <span className="font-bold text-primary text-lg md:text-xl">{category.price}</span>
                                 </div>
                             </CardHeader>
-                            {item.desc && (
-                              <CardContent className="flex justify-between gap-4">
-                                <p className="text-sm md:text-lg text-foreground flex-1 ">{item.desc}</p>
 
-                                {item.image && (
+                            {category.desc && (
+                              <CardContent className="flex justify-between gap-4">
+                                <p className="text-sm md:text-lg text-foreground flex-1 ">{category.desc}</p>
+
+                                {category.image && (
                                     <Dialog>
                                         <DialogTrigger asChild>
                                             <img 
-                                                src={item.image} 
-                                                alt={item.name} 
+                                                src={category.image} 
+                                                alt={category.name} 
                                                 className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-sm cursor-zoom-in shrink-0"
                                             />
                                         </DialogTrigger>
                                         <DialogContent className="sm:max-w-2xl border-none bg-transparent p-0 shadow-none flex">
-                                            <DialogTitle className="sr-only">{item.name}</DialogTitle>
+                                            <DialogTitle className="sr-only">{}</DialogTitle>
                                             <img 
-                                                src={item.image} 
-                                                alt={item.name} 
+                                                src={category.image} 
+                                                alt={category.name} 
                                                 className="w-full h-auto rounded-lg"
                                             />
                                         </DialogContent>
@@ -81,6 +84,8 @@ export default function Menu() {
                             )}
                             </Card>
                         ))}
+
+                        
                         </div>
                     </div>
                 </section>
