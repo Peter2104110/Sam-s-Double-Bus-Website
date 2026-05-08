@@ -31,7 +31,7 @@ export default function About() {
           <div
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: "url('/menu-background.webp')",
+              backgroundImage: "url('/bg-theme.webp')",
               backgroundSize: "cover",
               backgroundPosition: "right bottom",
               backgroundRepeat: "no-repeat"
